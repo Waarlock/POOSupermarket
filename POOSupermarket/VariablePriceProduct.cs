@@ -2,12 +2,9 @@
 {
     public class VariablePriceProduct : Product
     {
-
-
         public string Measurement { get; set; }
 
         public float Quantity { get; set; }
-
 
         public override decimal ValueToPay()
         {
@@ -20,6 +17,5 @@
                 $"\n\tMeasurement.:{$"{Measurement:N2}",18}"+                
                 $"\n\tValue......:{$"{ValueToPay():C2}",18}";
         }
-
     }
 }

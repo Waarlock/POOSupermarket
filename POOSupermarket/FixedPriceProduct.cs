@@ -2,10 +2,9 @@
 {
     public class FixedPriceProduct : Product
     {
-
         public override decimal ValueToPay()
         {
-            return Price * (decimal) Tax + Price;
+            return Price * (decimal)Tax + Price;
         }
         public override string ToString()
         {

@@ -4,34 +4,26 @@ namespace POOSupermarket
 {
     public class ComposedProduct : Product
     {
-
         public float Discount { get; set; }
-
-        public int Quantity { get; set; }
 
         public ICollection Products { get; set; }
 
-        private string asistant { get; set; }
-
-        public decimal Value { get; set; }
-
         public override decimal ValueToPay()
         {
-            Value = 0;
+            decimal Value = 0;
             foreach (Product product in Products)
             {
+
                 float discount = 0;
-                // decimal assist;
-                //  assist = product.ValueToPay();
-                discount = (float)product.ValueToPay()* Discount;
-                Value += product.ValueToPay() - (decimal) discount;                  
+                discount = (float)product.ValueToPay() * Discount;
+                Value += product.ValueToPay() - (decimal)discount;
             }
-            return  Value;
+            return Value;
         }
 
         public override string ToString()
         {
-            asistant = null;
+            string asistant = null;
             foreach (Product productDiscount in Products)
             {
                 asistant += productDiscount.Description + ", ";

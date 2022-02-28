@@ -1,9 +1,9 @@
 ﻿
-    using POOSupermarket;
-
+using POOSupermarket;
 
 Console.WriteLine("PRODUCTS");
 Console.WriteLine("-------------------------------------------------");
+
 Product product1 = new FixedPriceProduct()
 {
     Description = "Vino Gato Negro",
@@ -43,21 +43,8 @@ Product product5 = new ComposedProduct()
     Discount = 0.12F,
     Id = 5050,
     Products = new List<Product>() { product1, product2, product3, product4 }
-    
+
 };
-
-//ICollection<Product> Products = new List<Product>()
-//{
-//    product1, product2, product3, product4
-//};
-
-//decimal payroll = 0;
-
-//foreach (Product product in Products)
-//{
-//    Console.WriteLine(product);
-//    payroll += product.ValueToPay(product.Get_products(), payroll);
-//}
 
 Console.WriteLine(product1);
 Console.WriteLine(product2);
@@ -65,11 +52,8 @@ Console.WriteLine(product3);
 Console.WriteLine(product4);
 Console.WriteLine(product5);
 
-
 Invoice invoice = new Invoice();
 invoice.AddProduct(product1);
 invoice.AddProduct(product3);
 invoice.AddProduct(product5);
 Console.WriteLine(invoice);
-
-
