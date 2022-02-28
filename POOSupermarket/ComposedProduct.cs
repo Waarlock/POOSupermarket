@@ -17,20 +17,21 @@ namespace POOSupermarket
 
         public override decimal ValueToPay()
         {
+            Value = 0;
             foreach (Product product in Products)
             {
                 float discount = 0;
                 // decimal assist;
                 //  assist = product.ValueToPay();
-                discount = (float)product.ValueToPay() * Discount;
-
-                Value += product.ValueToPay() - (decimal)discount;
+                discount = (float)product.ValueToPay()* Discount;
+                Value += product.ValueToPay() - (decimal) discount;                  
             }
-            return Value;
+            return  Value;
         }
 
         public override string ToString()
         {
+            asistant = null;
             foreach (Product productDiscount in Products)
             {
                 asistant += productDiscount.Description + ", ";

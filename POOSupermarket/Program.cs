@@ -44,7 +44,6 @@ Product product5 = new ComposedProduct()
     Id = 5050,
     Products = new List<Product>() { product1, product2, product3, product4 }
     
-
 };
 
 //ICollection<Product> Products = new List<Product>()
@@ -59,7 +58,6 @@ Product product5 = new ComposedProduct()
 //    Console.WriteLine(product);
 //    payroll += product.ValueToPay(product.Get_products(), payroll);
 //}
-
 
 Console.WriteLine(product1);
 Console.WriteLine(product2);
